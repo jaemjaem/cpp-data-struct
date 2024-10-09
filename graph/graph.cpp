@@ -49,7 +49,7 @@ struct graph
 {
     std::vector<std::vector<int>> data;
 
-    graph(int n)
+    graph(int const n)
     {
         data.reserve(n);
         std::vector<int> row(n);

@@ -6,7 +6,7 @@ using uint = unsigned int;
 class hash_map
 {
 public:
-    hash_map(size_t n)
+    hash_map(size_t const n)
     {
         data = std::vector<int>(n, -1);
     }
@@ -18,13 +18,13 @@ public:
         std::cout << value << "을(를) 삽입했습니다.\n";
     }
 
-    bool find(uint value)
+    bool find(uint const value)
     {
         int n = data.size();
         return (data[value % n] == value);
     }
 
-    void erase(uint value)
+    void erase(uint const value)
     {
         int n = data.size();
         if (data[value % n] == value)

@@ -9,7 +9,7 @@ class dynamic_array
     size_t n;
 
 public:
-    dynamic_array(int n)
+    dynamic_array(int const n)
     {
         this->n = n;
         data = new T[n];
@@ -26,17 +26,17 @@ public:
         }
     }
 
-    T& operator[](int index)
+    T& operator[](int const index)
     {
         return data[index];
     }
 
-    const T& operator[](int index) const
+    const T& operator[](int const index) const
     {
         return data[index];
     }
 
-    T& at(int index)
+    T& at(int const index)
     {
         if (index < n) return data[index];
         throw "Index out of range";
